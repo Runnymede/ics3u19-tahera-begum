@@ -11,14 +11,21 @@ import java.util.Scanner;
 public class Quadratic {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		//scans a entered by user
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter a value for a:");
 		int a = sc.nextInt();
+		
+		//scans b entered by user
 		System.out.println("Please enter a value for b:");
 		int b = sc.nextInt();
+		
+		//scans c entered by user
 		System.out.println("Please enter a value for c:");
 		int c = sc.nextInt();
+		
+		//finds roots using the quadratic formula
 		double r1;
 		r1 = (-b + Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 		double r2;
