@@ -15,7 +15,7 @@ public class NamesArray {
 		
 		String [] names = new String [num];
 		
-		System.out.println("Enter the " + " names one by one");
+		System.out.println("Enter the names one by one");
 		
 		for (int i = 0; i < num; i++)
 		{
