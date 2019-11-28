@@ -10,7 +10,7 @@ public class TicTacToe {
 
 		char [][] tttboard = new char [3][3];
 
-		for (int i = 0; i < 9; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			System.out.println("First player enter which row number you want to put your X in from 0 to 2. No repeating places.");
 			int r1 = sc.nextInt();
@@ -32,51 +32,51 @@ public class TicTacToe {
 
 				}
 				System.out.println();
-				System.out.println("------------");
+				System.out.println("-----------");
 			}	
 
 			if (tttboard [0][0] == 'x' && tttboard [0][1] == 'x' && tttboard [0][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 			else if (tttboard [1][0] == 'x' && tttboard [1][1] == 'x' && tttboard [1][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 			else if (tttboard [2][0] == 'x' && tttboard [2][1] == 'x' && tttboard [2][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 
 			//
 			else if (tttboard [0][0] == 'x' && tttboard [1][0] == 'x' && tttboard [2][0] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 			else if (tttboard [0][1] == 'x' && tttboard [1][1] == 'x' && tttboard [2][1] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 			else if (tttboard [0][2] == 'x' && tttboard [1][2] == 'x' && tttboard [2][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 
 			//
 			else if (tttboard [0][0] == 'x' && tttboard [1][1] == 'x' && tttboard [2][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 			else if (tttboard [2][0] == 'x' && tttboard [1][1] == 'x' && tttboard [0][2] == 'x')
 			{
-				System.out.print("You won!");
+				System.out.println("You won!");
 				break;
 			}
 
@@ -99,50 +99,50 @@ public class TicTacToe {
 
 				}
 				System.out.println();
-				System.out.println("------------");
+				System.out.println("-----------");
 
 				if (tttboard [0][0] == 'o' && tttboard [0][1] == 'o' && tttboard [0][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 				else if (tttboard [1][0] == 'o' && tttboard [1][1] == 'o' && tttboard [1][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 				else if (tttboard [2][0] == 'o' && tttboard [2][1] == 'o' && tttboard [2][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 
 				//
 				else if (tttboard [0][0] == 'o' && tttboard [1][0] == 'o' && tttboard [2][0] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 				else if (tttboard [0][1] == 'o' && tttboard [1][1] == 'o' && tttboard [2][1] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 				else if (tttboard [0][2] == 'o' && tttboard [1][2] == 'o' && tttboard [2][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 
 				//
 				else if (tttboard [0][0] == 'o' && tttboard [1][1] == 'o' && tttboard [2][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 				else if (tttboard [2][0] == 'o' && tttboard [1][1] == 'o' && tttboard [0][2] == 'o')
 				{
-					System.out.print("You won!");
+					System.out.println("You won!");
 					break;
 				}
 			}	
