@@ -11,87 +11,111 @@ public class MathTutor {
 
 	public static void main(String[] args) {
 
+		//scanner
 		Scanner sc = new Scanner(System.in);
 
-
-		//randomly generating two numbers
+		//randomly generating two numbers from 1 to 10
 		int firstNumber = (int) (Math.random() * 10 + 1);
 		int secondNumber = (int) (Math.random() * 10 + 1);
 
-		//randomly generating operator
+		//randomly generating a number from 1 to 4
 		int operator = (int) (Math.random() * 4 + 1);
 
-		//assigns operator to the numbers
+		//assigns operator to number 1
 		if (operator==1)
 		{
 			//displays an addition expression
 			System.out.println( "What is " + firstNumber + "+" + secondNumber + "?" );
+			
+			//user enters their answer
 			int addition = sc.nextInt();
 
-
-			//checks to see if the user's answer is correct
+			//adds first number and second number
 			int correctAddition = firstNumber + secondNumber;
+			
+			//checks to see if the user's answer equals the computer's answer
 			if (addition == correctAddition)
 			{
+				//displays "correct" if user's answer equals the computer's answer
 				System.out.println( "Correct!" );
 			}
 			else
 			{
+				//displays "wrong" if user's answer doesn't equal the computer's answer
 				System.out.println( "Wrong!" );
 			}
 		}
+		//assigns operator to number 2
 		else if (operator==2)
 		{
 			//displays an subtraction expression
 			System.out.println("What is " + firstNumber + "-" + secondNumber + "?");
+			
+			//user enters their answer
 			int subtraction = sc.nextInt();
 
-
-			//checks to see if the user's answer is correct
+			//subtracts first number and second number
 			int correctSubtraction = firstNumber - secondNumber;
+			
+			//checks to see if the user's answer equals the computer's answer
 			if (subtraction == correctSubtraction)
 			{
+				//displays "correct" if user's answer equals the computer's answer
 				System.out.println( "Correct!" );
 			}
 			else
 			{
+				//displays "wrong" if user's answer doesn't equal the computer's answer
 				System.out.println( "Wrong!" );
 			}
 		}
+		//assigns operator to number 3
 		else if (operator==3)
 		{
 
-			//displays an multiplication expression
+			//displays a multiplication expression
 			System.out.println("What is " + firstNumber + "*" + secondNumber + "?");
+			
+			//user enters their answer
 			int multiplication = sc.nextInt();
 
 
-			//checks to see if the user's answer is correct
+			//multiplies first number and second number
 			int correctMultiplication = firstNumber * secondNumber;
+			
+			//checks to see if the user's answer equals the computer's answer
 			if (multiplication == correctMultiplication)
 			{
+				//displays "correct" if user's answer equals the computer's answer
 				System.out.println( "Correct!" );
 			}
 			else
 			{
+				//displays "wrong" if user's answer doesn't equal the computer's answer
 				System.out.println( "Wrong!" );
 			}
 		}
+		//assigns operator to number the remaining number (4)
 		else 
 		{
-			//displays an division expression
+			//displays a division expression
 			System.out.println("What is " + firstNumber + "/" + secondNumber + "?");
+			
+			//user enters their answer
 			double division = sc.nextDouble();
 
-
-			//checks to see if the user's answer is correct
+			//divides first number and second number
 			double correctDivision = firstNumber / secondNumber;
+			
+			//checks to see if the user's answer equals the computer's answer
 			if (division == correctDivision)
 			{
+				//displays "correct" if user's answer equals the computer's answer
 				System.out.println( "Correct!" );
 			}
 			else
 			{
+				//displays "wrong" if user's answer doesn't equal the computer's answer
 				System.out.println( "Wrong!" );
 			}
 		}

@@ -17,10 +17,14 @@ public class NecklaceProblem {
 
 		//asks the user for first single digit number
 		System.out.println("Enter a single digit number");
+		
+		//scans the first number entered by user
 		int input1 = sc.nextInt();
 
 		//asks the user for second single digit number
 		System.out.println("Enter another single digit number");
+		
+		//scans the second number entered by user
 		int input2 = sc.nextInt();
 
 		//variables
@@ -32,10 +36,10 @@ public class NecklaceProblem {
 		do
 		{
 			
-			//adds the 2 numbers entered by the user
+			//adds the 2 numbers entered by the user and find the one's digit
 			num3 = ( num1 + num2 ) % 10;
 			
-			//displays the next number
+			//displays the third number
 			System.out.println(num3);
 			
 			//the first number becomes the second number
