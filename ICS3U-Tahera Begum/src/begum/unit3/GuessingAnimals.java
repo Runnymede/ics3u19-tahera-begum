@@ -12,19 +12,25 @@ public class GuessingAnimals {
 		Scanner sc = new Scanner(System.in);
 
 		//player guesses a number
-		System.out.println("Hi. Let's play a game! Geuss the animal I'm thinking of.");
+		System.out.println("Hi. Let's play a game! Think of an animal and I'll try to guess it.");
 
-		////scans the number guessed by user
-		String guess = sc.next();
 
-		//computer generates random number
-		int num = (int) (Math.random() * 19);
 
 		for (int i=0; i<20; i++)
-		if (num==i)
 		{
-			System.out.println(animals[i]);
+			//computer generates random number
+			int num = (int) (Math.random() * 19);
+			
+			String chosen = animals[num];
+			System.out.println("Is it a " + chosen + "? Yes or no?");
+			String answer = sc.next();
+			if (answer.equalsIgnoreCase("Yes"))
+			{
+				System.out.println("I won!");
+				break;
+			}
 		}
+
 
 
 
