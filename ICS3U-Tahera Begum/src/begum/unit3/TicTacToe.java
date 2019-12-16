@@ -1,4 +1,9 @@
 package begum.unit3;
+/**
+ * November 25, 2019
+ * the tic tac toe game
+ * @author Tahera Begum
+ */
 
 import java.util.Scanner;
 public class TicTacToe {
@@ -8,6 +13,7 @@ public class TicTacToe {
 
 		Scanner sc = new Scanner(System.in);
 
+		
 		char [][] tttboard = new char [3][3];
 
 		for (int i = 0; i < 5; i++)
