@@ -10,24 +10,28 @@ public class TicTacToe {
 
 	public static void main(String[] args) {
 
-
+		//scanner
 		Scanner sc = new Scanner(System.in);
 
-		
+		//2D array
 		char [][] tttboard = new char [3][3];
 
+		//loops the entire program 5 times
 		for (int i = 0; i < 5; i++)
 		{
+			//asks the x player which row he wants his x to be
 			System.out.println("First player enter which row number you want to put your X in from 0 to 2. No repeating places.");
 			int r1 = sc.nextInt();
 
+			//asks the x player which column he wants his x to be
 			System.out.println("First player enter which column number you want to put your X in from 0 to 2. No repeating places.");
 			int c1 = sc.nextInt();
 
+			//puts the x where the x player wanted it
 			tttboard [r1][c1] = 'x';
 
 
-
+			//prints the tic tac toe chart
 			for (int row = 0; row < tttboard.length; row++)
 
 			{
@@ -41,6 +45,7 @@ public class TicTacToe {
 				System.out.println("-----------");
 			}	
 
+			//if statements to tell the x player if he won and then breaks out of the loop
 			if (tttboard [0][0] == 'x' && tttboard [0][1] == 'x' && tttboard [0][2] == 'x')
 			{
 				System.out.println("You won!");
@@ -87,14 +92,17 @@ public class TicTacToe {
 			}
 
 
+			//asks the o player which row he wants his x to be
 			System.out.println("Second player enter which row number you want to put your O in. No repeating places.");
 			int r2 = sc.nextInt();
 
+			//asks the o player which column he wants his x to be
 			System.out.println("Second player enter which column number you want to put your O in. No repeating places.");
 			int c2 = sc.nextInt();
 
 			tttboard [r2][c2] = 'o';
 
+			//prints the tic tac toe chart
 			for (int row = 0; row < tttboard.length; row++)
 
 			{
@@ -107,6 +115,8 @@ public class TicTacToe {
 				System.out.println();
 				System.out.println("-----------");
 
+
+				//if statements to tell the o player if he won and then breaks out of the loop
 				if (tttboard [0][0] == 'o' && tttboard [0][1] == 'o' && tttboard [0][2] == 'o')
 				{
 					System.out.println("You won!");
@@ -153,6 +163,8 @@ public class TicTacToe {
 				}
 			}	
 		}
+		//closes scanner
+		sc.close();
 
 	}
 
