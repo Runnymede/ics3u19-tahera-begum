@@ -1,7 +1,5 @@
 package begum.unit4;
-
 import java.util.Scanner;
-
 /**
  * december 17, 2019
  * prompts the user for the size of an isosceles triangle and then displays the triangle with that many lines
