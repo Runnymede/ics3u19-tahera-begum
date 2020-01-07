@@ -16,7 +16,7 @@ public class MathPlus {
 		int num = sc.nextInt();
 
 		//an array for the list of integers that will be entered by the user
-		String [] integers = new String [num];
+		int [] integers = new int [num];
 
 		//tells the user to enter the integers one by one
 		System.out.println("Enter the integers one by one");
@@ -25,15 +25,213 @@ public class MathPlus {
 		for (int i = 0; i < num; i++)
 		{
 			//scans the name puts it in the array
-			integers [i] = sc.next();
+			integers [i] = sc.nextInt();
 
 		}
-		min(String [] integers);
-
+		//declares the return from min method as small and sends the integers array
+		int small= min(integers);
+		
+		//prints the smallest integer from the min method 
+		System.out.println("The smallest number in the array is in index " + small);
+		
+		
+		//declares the return from max as big and sends the integers array
+		int big= max(integers);
+		
+		//prints the biggest integer from the max method 
+		System.out.println("The biggest number in the array is in index " + big);
+		
+		
+		//declares the return from sum as all and sends the integers array
+		int all= sum(integers);
+		
+		//prints the sum from the sum method 
+		System.out.println("The sum of all the integers is " + all);
+		
+		
+		//declares the return from average as ave and sends the integers array
+		double ave= average(integers);
+		
+		//prints the average from the average method 
+		System.out.println("The average of all the integers is " + ave);
+		
+		
+		
 	}
 
-	public static int min(String [] integers) {
+	
+	/**
+	 * method finds the index with smallest number
+	 * @param arr
+	 * @return
+	 */
+	public static int min(int[] arr) {
 
-		System.out.println("");
+		int smallestIndex = 0;
+		
+		//loops as many times as the length of the array
+		for (int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] < arr[smallestIndex]) {
+				smallestIndex = i;
+			}
+
+		}
+		
+		return smallestIndex;
+		
+	}
+	
+	
+	/**
+	 * method finds the index with biggest number
+	 * @param arr
+	 * @return
+	 */
+	public static int max(int[] arr) {
+
+		int biggestIndex = 0;
+		
+		//loops as many times as the length of the array
+		for (int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] > arr[biggestIndex]) {
+				biggestIndex = i;
+			}
+
+		}
+		
+		return biggestIndex;
+		
+	}
+	
+	
+	/**
+	 * method finds the sum
+	 * @param arr
+	 * @return
+	 */
+	public static int sum(int[] arr) {
+
+		int sum = arr[0];
+		
+		//i starts at 1 and as long as its less than the length it loops
+		for (int i = 1; i < arr.length; i++)
+		{
+			sum = sum + arr[i];
+			
+		}
+		
+		return sum;
+		
+	}
+	
+	
+	/**
+	 * method finds the average
+	 * @param arr
+	 * @return
+	 */
+	public static double average(int [] arr) {
+
+		int sum = arr[0];
+		
+		//i starts at 1 and as long as its less than the length it loops
+		for (int i = 1; i < arr.length; i++)
+		{
+			sum = sum + arr[i];
+			
+		}
+		
+		double average = sum / arr.length;
+		
+		return average;
+		
+	}
+	
+	
+	/**
+	 * method finds the index with smallest number
+	 * @param arr
+	 * @return
+	 */
+	public static int min(double[] arr) {
+
+		int smallestIndex = 0;
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] < arr[smallestIndex]) {
+				smallestIndex = i;
+			}
+
+		}
+		
+		return smallestIndex;
+		
+	}
+	
+	
+	/**
+	 * method finds the index with biggest number
+	 * @param arr
+	 * @return
+	 */
+	public static int max(double[] arr) {
+
+		int biggestIndex = 0;
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] > arr[biggestIndex]) {
+				biggestIndex = i;
+			}
+
+		}
+		
+		return biggestIndex;
+		
+	}
+	
+	
+	/**
+	 * method finds the sum
+	 * @param arr
+	 * @return
+	 */
+	public static double sum(double[] arr) {
+
+		double sum = arr[0];
+		
+		for (int i = 1; i < arr.length; i++)
+		{
+			sum = sum + arr[i];
+			
+		}
+		
+		return sum;
+		
+	}
+	
+	
+	/**
+	 * method finds the average
+	 * @param arr
+	 * @return
+	 */
+	public static double average(double [] arr) {
+
+		double sum = arr[0];
+		
+		for (int i = 1; i < arr.length; i++)
+		{
+			sum = sum + arr[i];
+			
+		}
+		
+		double average = sum / arr.length;
+		
+		return average;
+		
 	}
 }
