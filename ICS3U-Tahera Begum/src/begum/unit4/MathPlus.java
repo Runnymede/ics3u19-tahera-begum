@@ -77,12 +77,14 @@ public class MathPlus {
 		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
+			//if array with index i is less than array with smallest index
 			if(arr[i] < arr[smallestIndex]) {
+				//then array with index i is the new smallest index
 				smallestIndex = i;
 			}
 
 		}
-
+		//sends smallest index to main method
 		return smallestIndex;
 
 	}
@@ -100,12 +102,14 @@ public class MathPlus {
 		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
+			//if array with index i is greater than array with smallest index
 			if(arr[i] > arr[biggestIndex]) {
+				//then array with index i is the new biggest index
 				biggestIndex = i;
 			}
 
 		}
-
+		//sends biggest index to main method
 		return biggestIndex;
 
 	}
@@ -123,10 +127,12 @@ public class MathPlus {
 		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
+			//sum is all the numbers in the array added together
+			//in the loop the integers are added one at a time
 			sum = sum + arr[i];
 
 		}
-
+		//sends sum to main method
 		return sum;
 
 	}
@@ -144,12 +150,16 @@ public class MathPlus {
 		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
+			//sum is all the numbers in the array added together
+			//in the loop the integers are added one at a time
 			sum = sum + arr[i];
 
 		}
 
+		//average is sum divided by the length of the array
 		double average = sum / arr.length;
 
+		//sends average to main method
 		return average;
 
 	}
@@ -164,14 +174,18 @@ public class MathPlus {
 
 		int smallestIndex = 0;
 
+		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
+			//if array with index i is less than array with smallest index
 			if(arr[i] < arr[smallestIndex]) {
+				//then array with index i is the new smallest index
 				smallestIndex = i;
 			}
 
 		}
 
+		//sends smallest index to main method
 		return smallestIndex;
 
 	}
