@@ -1,4 +1,9 @@
 package begum.unit4;
+/**
+ * January,07, 2019
+ * creating methods
+ * @author Tahera Begum
+ */
 
 import java.util.Scanner;
 
@@ -30,36 +35,36 @@ public class MathPlus {
 		}
 		//declares the return from min method as small and sends the integers array
 		int small= min(integers);
-		
+
 		//prints the smallest integer from the min method 
 		System.out.println("The smallest number in the array is in index " + small);
-		
-		
+
+
 		//declares the return from max as big and sends the integers array
 		int big= max(integers);
-		
+
 		//prints the biggest integer from the max method 
 		System.out.println("The biggest number in the array is in index " + big);
-		
-		
+
+
 		//declares the return from sum as all and sends the integers array
 		int all= sum(integers);
-		
+
 		//prints the sum from the sum method 
 		System.out.println("The sum of all the integers is " + all);
-		
-		
+
+
 		//declares the return from average as ave and sends the integers array
 		double ave= average(integers);
-		
+
 		//prints the average from the average method 
 		System.out.println("The average of all the integers is " + ave);
-		
-		
-		
+
+
+
 	}
 
-	
+
 	/**
 	 * method finds the index with smallest number
 	 * @param arr
@@ -68,7 +73,7 @@ public class MathPlus {
 	public static int min(int[] arr) {
 
 		int smallestIndex = 0;
-		
+
 		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -77,12 +82,12 @@ public class MathPlus {
 			}
 
 		}
-		
+
 		return smallestIndex;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the index with biggest number
 	 * @param arr
@@ -91,7 +96,7 @@ public class MathPlus {
 	public static int max(int[] arr) {
 
 		int biggestIndex = 0;
-		
+
 		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -100,12 +105,12 @@ public class MathPlus {
 			}
 
 		}
-		
+
 		return biggestIndex;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the sum
 	 * @param arr
@@ -114,19 +119,19 @@ public class MathPlus {
 	public static int sum(int[] arr) {
 
 		int sum = arr[0];
-		
+
 		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
 			sum = sum + arr[i];
-			
+
 		}
-		
+
 		return sum;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the average
 	 * @param arr
@@ -135,21 +140,21 @@ public class MathPlus {
 	public static double average(int [] arr) {
 
 		int sum = arr[0];
-		
+
 		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
 			sum = sum + arr[i];
-			
+
 		}
-		
+
 		double average = sum / arr.length;
-		
+
 		return average;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the index with smallest number
 	 * @param arr
@@ -158,7 +163,7 @@ public class MathPlus {
 	public static int min(double[] arr) {
 
 		int smallestIndex = 0;
-		
+
 		for (int i = 0; i < arr.length; i++)
 		{
 			if(arr[i] < arr[smallestIndex]) {
@@ -166,12 +171,12 @@ public class MathPlus {
 			}
 
 		}
-		
+
 		return smallestIndex;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the index with biggest number
 	 * @param arr
@@ -180,7 +185,7 @@ public class MathPlus {
 	public static int max(double[] arr) {
 
 		int biggestIndex = 0;
-		
+
 		for (int i = 0; i < arr.length; i++)
 		{
 			if(arr[i] > arr[biggestIndex]) {
@@ -188,12 +193,12 @@ public class MathPlus {
 			}
 
 		}
-		
+
 		return biggestIndex;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the sum
 	 * @param arr
@@ -202,18 +207,18 @@ public class MathPlus {
 	public static double sum(double[] arr) {
 
 		double sum = arr[0];
-		
+
 		for (int i = 1; i < arr.length; i++)
 		{
 			sum = sum + arr[i];
-			
+
 		}
-		
+
 		return sum;
-		
+
 	}
-	
-	
+
+
 	/**
 	 * method finds the average
 	 * @param arr
@@ -222,16 +227,33 @@ public class MathPlus {
 	public static double average(double [] arr) {
 
 		double sum = arr[0];
-		
+
 		for (int i = 1; i < arr.length; i++)
 		{
 			sum = sum + arr[i];
-			
+
 		}
-		
+
 		double average = sum / arr.length;
-		
+
 		return average;
-		
+
+	}
+
+	public static double median(double [] arr) {
+
+		int smallestIndex = 0;
+
+		//loops as many times as the length of the array
+		for (int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] < arr[smallestIndex]) {
+				smallestIndex = i;
+			}
+
+		}
+
+		return median;
+
 	}
 }
