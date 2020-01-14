@@ -63,12 +63,6 @@ public class MathPlus {
 		//prints the average from the average method 
 		System.out.println("The average of all the integers is " + ave);
 
-		//declares the return from average as ave and sends the integers array
-		double med = median(integers2);
-
-		//prints the median from the median method 
-		System.out.println("The median of all the integers is " + med);
-
 
 
 	}
@@ -263,113 +257,6 @@ public class MathPlus {
 
 	}
 
-	public static double median(double [] arr) {
-
-		Arrays.sort(arr);
-		
-		
-		int middleIndex = arr.length / 2;
-		
-		int modulus = arr.length % 2;
-		
-		if (modulus != 0)
-		{
-			double median = arr [middleIndex];
-			return median;
-		} 
-		else
-		{
-		int middleIndex2 = middleIndex - 1;
-			double middleNumber1 = arr[middleIndex];
-			double middleNumber2 = arr[middleIndex2];
-			double median = (middleNumber1 + middleNumber2)/2;
-			return median;
-		}
-		
-		
-		
-	}
-	public static double median(double [] arr) {
 	
-		int total;
-		int [] counter = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		//if total equals 2
-		if (total == 2)
-		{
-			//then adds one to the counter at the index of 0
-			counter [0]++;
-		}
-
-		//if total equals 3
-		else if (total == 3)
-		{
-			//then adds one to the counter at the index of 1
-			counter [1]++;
-		}
-
-		//if total equals 4
-		else if (total == 4)
-		{
-			//then adds one to the counter at the index of 2
-			counter [2]++;
-		}
-
-		//if total equals 5
-		else if (total == 5)
-		{
-			//then adds one to the counter at the index of 3
-			counter [3]++;
-		}
-
-		//if total equals 6
-		else if (total == 6)
-		{
-			//then adds one to the counter at the index of 4
-			counter [4]++;
-		}
-
-		//if total equals 7
-		else if (total == 7)
-		{
-			//then adds one to the counter at the index of 5
-			counter [5]++;
-		}
-
-		//if total equals 8
-		else if (total == 8)
-		{
-			//then adds one to the counter at the index of 6
-			counter [6]++;
-		}
-
-		//if total equals 9
-		else if (total == 9)
-		{
-			//then adds one to the counter at the index of 7
-			counter [7]++;
-		}
-
-		//if total equals 10
-		else if (total == 10)
-		{
-			//then adds one to the counter at the index of 8
-			counter [8]++;
-		}
-
-		//if total equals 11
-		else if (total == 11)
-		{
-			//then adds one to the counter at the index of 9
-			counter [9]++;
-		}
-
-		//if total equals 12
-		else if (total == 12)
-		{
-			//then adds one to the counter at the index of 10
-			counter [10]++;
-		}
-
-	}
 }
 
