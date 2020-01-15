@@ -36,6 +36,10 @@ public class MathPlus2 {
 		//scans the number entered by the user and declares it as num
 		int num2 = sc.nextInt();
 
+		//asks the user for a list of integers
+		System.out.println("Enter a number to find its factorial.");
+		//scans the number entered by the user and declares it as num
+		int num3 = sc.nextInt();
 
 
 		//declares the return from average as ave and sends the integers array
@@ -43,6 +47,12 @@ public class MathPlus2 {
 
 		//prints the median from the median method 
 		System.out.println("The median of all the integers is " + med);
+
+		//declares the return from average as ave and sends the integers array
+		double mode = mode(integers2);
+
+		//prints the mode from the mode method 
+		System.out.println("The mode of all the integers is " + mode);
 
 		//declares the return from average as ave and sends the integers array
 		boolean pri = prime(num2);
@@ -59,6 +69,13 @@ public class MathPlus2 {
 			//then it tells the user the number is prime
 			System.out.println(num2 +" is prime.");
 		}
+
+		//declares the return from average as ave and sends the integers array
+		long fact = factorial(num3);
+		
+		//prints the mode from the mode method 
+		System.out.println("The factorial of " + num3 + " is " + fact);
+
 
 	}
 
@@ -85,18 +102,32 @@ public class MathPlus2 {
 			return median;
 		}
 	}
-	
+
 	public static double mode(double [] arr) {
 
-		int bigNum = 0;
+		int counter2=0;
+		double bigNum = 0;
 		for(int i = 0; i < arr.length; i++)
 		{
 			int counter1 = 0;
 			for(int j = 0; j < i; j++)
 			{
-				
+
+				if(arr[i]==arr[j])
+				{
+					counter1++;
+					bigNum=arr[i];
+
+				}
+				counter2=counter1;
+				if(counter1>counter2)
+				{
+					bigNum=arr[i];
+				}
 			}
+
 		}
+		return bigNum;
 	}
 
 	public static boolean prime(int num2) {
@@ -125,6 +156,21 @@ public class MathPlus2 {
 			}	
 		} 
 		return prime;
+	}
+
+	public static long factorial(int num3) {
+		long factorial = num3;
+		//i starts at 1 and as long as its less than the length it loops
+		for (int i = num3 - 1; i > 0; i--)
+		{
+			//sum is all the numbers in the array added together
+			//in the loop the integers are added one at a time
+			
+			factorial = factorial * i;
+
+		}
+		return factorial;
+		
 	}
 
 }
