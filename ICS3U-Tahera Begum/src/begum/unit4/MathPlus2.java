@@ -31,29 +31,23 @@ public class MathPlus2 {
 
 		}
 
-		//asks the user for a list of integers
-		System.out.println("Enter a number you would like to find out if it's prime or not.");
-		//scans the number entered by the user and declares it as num
-		int num2 = sc.nextInt();
 
-		//asks the user for a list of integers
-		System.out.println("Enter a number to find its factorial.");
-		//scans the number entered by the user and declares it as num
-		int num3 = sc.nextInt();
 
 
 		//declares the return from average as ave and sends the integers array
 		double med = median(integers2);
-
 		//prints the median from the median method 
 		System.out.println("The median of all the integers is " + med);
 
 		//declares the return from average as ave and sends the integers array
 		double mode = mode(integers2);
-
 		//prints the mode from the mode method 
 		System.out.println("The mode of all the integers is " + mode);
 
+		//asks the user for a list of integers
+		System.out.println("Enter a number you would like to find out if it's prime or not.");
+		//scans the number entered by the user and declares it as num
+		int num2 = sc.nextInt();
 		//declares the return from average as ave and sends the integers array
 		boolean pri = prime(num2);
 
@@ -70,12 +64,21 @@ public class MathPlus2 {
 			System.out.println(num2 +" is prime.");
 		}
 
+		//asks the user for a list of integers
+		System.out.println("Enter a number to find its factorial.");
+		//scans the number entered by the user and declares it as num
+		int num3 = sc.nextInt();
 		//declares the return from average as ave and sends the integers array
 		long fact = factorial(num3);
-		
 		//prints the mode from the mode method 
 		System.out.println("The factorial of " + num3 + " is " + fact);
 
+		//asks the user for a list of integers
+		System.out.println("Enter a number you would like to find the number of factors for.");
+		//declares the return from average as ave and sends the integers array
+		int numFactors = numOfFactors(num4);
+		//prints the mode from the mode method 
+		System.out.println("There are " + numFactor + " factors.");
 
 	}
 
@@ -165,12 +168,55 @@ public class MathPlus2 {
 		{
 			//sum is all the numbers in the array added together
 			//in the loop the integers are added one at a time
-			
+
 			factorial = factorial * i;
 
 		}
 		return factorial;
+
+	}
+	public static int numOfFactors(int num4) {
+
+		int count = 0;
+		double stop = num4/2;
+		double round = Math.rint(stop);
+		for (int i = 1; i <= round; i = i + 1)
+		{
+			double factor = num4 % i;
+			if (factor==0)
+			{
+				count= count + 1;
+			}
+		}
+		return count;
+	}
+	
+	public static int [] factors(int num5) {
+
+		int count = 0;
+		double stop = num5/2;
+		double round = Math.rint(stop);
+		for (int i = 1; i < round; i = i + 1)
+		{
+			double factor = num5 % i;
+			if (factor==0)
+			{
+				count= count + 1;
+			}
+		}
 		
+		int [] factors = new int [count];
+		int count2 = 0;
+		for (int i = 1; i <= round; i = i + 1)
+		{
+			double factor = num5 % i;
+			if (factor==0)
+			{
+				factors[count2] = i;
+				count2 = count2 + 1;
+			}
+		}
+		return factors;
 	}
 
 }
