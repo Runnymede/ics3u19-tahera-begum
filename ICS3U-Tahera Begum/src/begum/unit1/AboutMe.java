@@ -1,9 +1,10 @@
 package begum.unit1;
 /**
  * September 18, 2019
- * @author Tahera Begum
+ * 
  * Personal information and a phrase that encourages our school.
  * Also my class schedule.
+ * @author Tahera Begum
  */
 public class AboutMe {
 	/** 

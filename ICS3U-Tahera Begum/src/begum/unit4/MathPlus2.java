@@ -74,11 +74,20 @@ public class MathPlus2 {
 		System.out.println("The factorial of " + num3 + " is " + fact);
 
 		//asks the user for a list of integers
-		System.out.println("Enter a number you would like to find the number of factors for.");
+		System.out.println("Enter a number you would like to find the number of factors and factors for.");
 		//declares the return from average as ave and sends the integers array
+		int num4 = sc.nextInt();
 		int numFactors = numOfFactors(num4);
 		//prints the mode from the mode method 
-		System.out.println("There are " + numFactor + " factors.");
+		System.out.println("There are " + numFactors + " factors.");
+		int [] facts = factors(num4);
+		//prints the mode from the mode method 
+		
+		System.out.println("The factors are " );
+		for (int i=0; i< facts.length; i++)
+		{
+		System.out.print(facts[i] + ", " );
+		}
 
 	}
 
@@ -178,7 +187,7 @@ public class MathPlus2 {
 	public static int numOfFactors(int num4) {
 
 		int count = 0;
-		double stop = num4/2;
+		double stop = num4;
 		double round = Math.rint(stop);
 		for (int i = 1; i <= round; i = i + 1)
 		{
@@ -190,26 +199,27 @@ public class MathPlus2 {
 		}
 		return count;
 	}
-	
-	public static int [] factors(int num5) {
+
+	public static int [] factors(int num4) {
 
 		int count = 0;
-		double stop = num5/2;
+		int count2 = 0;
+		double stop = num4;
 		double round = Math.rint(stop);
-		for (int i = 1; i < round; i = i + 1)
+		for (int i = 1; i <= round; i = i + 1)
 		{
-			double factor = num5 % i;
-			if (factor==0)
+			double mod = num4 % i;
+			if (mod==0)
 			{
 				count= count + 1;
 			}
 		}
-		
+
 		int [] factors = new int [count];
-		int count2 = 0;
+		
 		for (int i = 1; i <= round; i = i + 1)
 		{
-			double factor = num5 % i;
+			double factor = num4 % i;
 			if (factor==0)
 			{
 				factors[count2] = i;
