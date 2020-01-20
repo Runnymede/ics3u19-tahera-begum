@@ -179,6 +179,10 @@ public class Bingo {
 		sc.close();
 	}
 
+	/**
+	 * it rolls the dice
+	 * @return total - the number the dice rolled
+	 */
 	public static int dice()
 	{
 
@@ -198,7 +202,11 @@ public class Bingo {
 		return total;
 
 	}
-
+	
+	/**
+	 * displays the equations on the board 1
+	 * @param board1 - an array to display the board for player 1
+	 */
 	public static void equations1(String [][]board1)
 	{
 		//assigns all the equations to the player 1's board
@@ -219,6 +227,11 @@ public class Bingo {
 		board1[3][2] = "36/6   ";
 		board1[3][3] = "104-92 ";
 	}
+	
+	/**
+	 * displays the equations on the board 2
+	 * @param board2 - an array to display the board for player 2
+	 */
 	public static void equations2(String [][]board2)
 	{
 		//assigns all the equations to the player 2's board
@@ -239,6 +252,11 @@ public class Bingo {
 		board2[3][2] = "1+1  ";
 		board2[3][3] = "8+3  ";
 	}
+	
+	/**
+	 * displays the lines on the board 1
+	 * @param board1 - an array to display the board for player 1
+	 */
 	public static void displayBoard1(String [][]board1)
 	{
 		//prints board for player 1
@@ -256,6 +274,11 @@ public class Bingo {
 		}	
 
 	}
+	
+	/**
+	 * displays the lines on the board 2
+	 * @param board2 - an array to display the board for player 2
+	 */
 	public static void displayBoard2(String [][]board2)
 	{
 		//prints board for player 2
@@ -274,6 +297,10 @@ public class Bingo {
 
 	}
 
+	/**
+	 * all the answers to player 1's board
+	 * @param ans1 - an array to check if the player 1's answers are correct
+	 */
 	public static void answers1(int [][] ans1)
 	{
 		//declares all the answers to the equations in an array for player 1
@@ -295,6 +322,10 @@ public class Bingo {
 		ans1[3][3] = 1;
 	}
 
+	/**
+	 * all the answers to player 2's board
+	 * @param ans2 - an array to check if the player 2's answers are correct
+	 */
 	public static void answers2(int [][] ans2)
 	{
 		//declares all the answers to the equations in an array for player 2
