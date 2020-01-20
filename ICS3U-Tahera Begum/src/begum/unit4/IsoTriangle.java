@@ -19,9 +19,9 @@ public class IsoTriangle {
 		//displays all lines of stars in the triangle
 		for (int i=1; i<=lines; i++)
 		{
-			//displays the spaces between stars
+			//calls the spaces method
 			drawSpaces(lines-i);
-			//displays the stars
+			//calls the stars method
 			drawStars(i*2-1);
 			System.out.println();
 			
@@ -32,7 +32,7 @@ public class IsoTriangle {
 	}
 
 	/**
-	 * 
+	 * displays the stars
 	 * @param n
 	 */
 	public static void drawStars(int n) {
@@ -44,6 +44,11 @@ public class IsoTriangle {
 			
 
 	}
+	
+	/**
+	 * displays the spaces
+	 * @param m
+	 */
 	public static void drawSpaces(int m) {
 
 			for (int j=0; j<m; j++)

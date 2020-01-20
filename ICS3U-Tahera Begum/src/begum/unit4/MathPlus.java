@@ -17,21 +17,19 @@ public class MathPlus {
 
 		//asks the user for a list of integers
 		System.out.println("Enter the number of integers you would like in your list.");
-
-		//scans the number entered by the user and declares it as num
 		int num = sc.nextInt();
 
-		//an array for the list of integers that will be entered by the user
+		//arrays for the list of integers that will be entered by the user
 		int [] integers = new int [num];
 		double [] integers2 = new double [num];
 
-		//tells the user to enter the integers one by one
+		//tells the user to enter the integers
 		System.out.println("Enter the integers one by one");
 
-		//loops the number of times the number of integers
+		//loops until the user enters all integers
 		for (int i = 0; i < num; i++)
 		{
-			//scans the name puts it in the array
+			//scans the integers, puts it in the array
 			integers [i] = sc.nextInt();
 			integers2 [i] = integers [i];
 
@@ -63,6 +61,8 @@ public class MathPlus {
 		//prints the average from the average method 
 		System.out.println("The average of all the integers is " + ave);
 
+		//closes scanner
+		sc.close();
 
 
 	}
@@ -75,6 +75,7 @@ public class MathPlus {
 	 */
 	public static int min(int[] arr) {
 
+		//smallest index starts with index 0
 		int smallestIndex = 0;
 
 		//loops as many times as the length of the array
@@ -100,6 +101,7 @@ public class MathPlus {
 	 */
 	public static int max(int[] arr) {
 
+		//biggestIndex starts with index 0
 		int biggestIndex = 0;
 
 		//loops as many times as the length of the array
@@ -171,10 +173,11 @@ public class MathPlus {
 	/**
 	 * method finds the index with smallest number
 	 * @param arr
-	 * @return
+	 * @return smallestIndex
 	 */
 	public static int min(double[] arr) {
 
+		//smallest index starts with index 0
 		int smallestIndex = 0;
 
 		//loops as many times as the length of the array
@@ -201,16 +204,21 @@ public class MathPlus {
 	 */
 	public static int max(double[] arr) {
 
+		//biggestIndex starts with index 0
 		int biggestIndex = 0;
 
+		//loops as many times as the length of the array
 		for (int i = 0; i < arr.length; i++)
 		{
+			//if array with index i is greater than array with smallest index
 			if(arr[i] > arr[biggestIndex]) {
+				//then array with index i is the new biggest index
 				biggestIndex = i;
 			}
 
 		}
 
+		//sends biggest index to main method
 		return biggestIndex;
 
 	}
@@ -225,12 +233,16 @@ public class MathPlus {
 
 		double sum = arr[0];
 
+		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
+			//sum is all the numbers in the array added together
+			//in the loop the integers are added one at a time
 			sum = sum + arr[i];
 
 		}
 
+		//sends sum to main method
 		return sum;
 
 	}
@@ -245,18 +257,23 @@ public class MathPlus {
 
 		double sum = arr[0];
 
+		//i starts at 1 and as long as its less than the length it loops
 		for (int i = 1; i < arr.length; i++)
 		{
+			//sum is all the numbers in the array added together
+			//in the loop the integers are added one at a time
 			sum = sum + arr[i];
 
 		}
 
+		//average is sum divided by the length of the array
 		double average = sum / arr.length;
 
+		//sends average to main method
 		return average;
 
 	}
 
-	
+
 }
 

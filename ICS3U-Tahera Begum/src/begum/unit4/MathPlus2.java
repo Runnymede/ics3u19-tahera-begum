@@ -11,21 +11,19 @@ public class MathPlus2 {
 
 		//asks the user for a list of integers
 		System.out.println("Enter the number of integers you would like in your list.");
-
-		//scans the number entered by the user and declares it as num
 		int num = sc.nextInt();
 
-		//an array for the list of integers that will be entered by the user
+		//arrays for the list of integers that will be entered by the user
 		int [] integers = new int [num];
 		double [] integers2 = new double [num];
 
-		//tells the user to enter the integers one by one
+		//tells the user to enter the integers
 		System.out.println("Enter the integers one by one");
 
 		//loops the number of times the number of integers
 		for (int i = 0; i < num; i++)
 		{
-			//scans the name puts it in the array
+			//scans the name, puts it in the array
 			integers [i] = sc.nextInt();
 			integers2 [i] = integers [i];
 
@@ -34,21 +32,21 @@ public class MathPlus2 {
 
 
 
-		//declares the return from average as ave and sends the integers array
+		//declares the return from median as med and sends the integers array
 		double med = median(integers2);
 		//prints the median from the median method 
 		System.out.println("The median of all the integers is " + med);
 
-		//declares the return from average as ave and sends the integers array
-		double mode = mode(integers2);
+		//declares the return from mode as mod and sends the integers array
+		double mod = mode(integers2);
 		//prints the mode from the mode method 
-		System.out.println("The mode of all the integers is " + mode);
+		System.out.println("The mode of all the integers is " + mod);
 
-		//asks the user for a list of integers
+		//asks the user for a number for prime
 		System.out.println("Enter a number you would like to find out if it's prime or not.");
-		//scans the number entered by the user and declares it as num
 		int num2 = sc.nextInt();
-		//declares the return from average as ave and sends the integers array
+		
+		//declares the return from prime as pri and sends the num2
 		boolean pri = prime(num2);
 
 		//if prime was labeled as false 
@@ -64,25 +62,29 @@ public class MathPlus2 {
 			System.out.println(num2 +" is prime.");
 		}
 
-		//asks the user for a list of integers
+		//asks the user for a number for factorial
 		System.out.println("Enter a number to find its factorial.");
-		//scans the number entered by the user and declares it as num
 		int num3 = sc.nextInt();
-		//declares the return from average as ave and sends the integers array
+		
+		//declares the return from factorial as fact and sends the num3
 		long fact = factorial(num3);
-		//prints the mode from the mode method 
+		//prints the factorial from the factorial method 
 		System.out.println("The factorial of " + num3 + " is " + fact);
 
-		//asks the user for a list of integers
+		//asks the user for a number for number of factors
 		System.out.println("Enter a number you would like to find the number of factors and factors for.");
-		//declares the return from average as ave and sends the integers array
 		int num4 = sc.nextInt();
+		
+		//declares the return from numOfFactors as numFactors and sends the num4
 		int numFactors = numOfFactors(num4);
-		//prints the mode from the mode method 
+		//prints the number of factors from the method 
 		System.out.println("There are " + numFactors + " factors.");
+		
+		//declares the return from factors as facts and sends the num4
 		int [] facts = factors(num4);
 		//prints the mode from the mode method 
 		
+		//prints all factors
 		System.out.println("The factors are " );
 		for (int i=0; i< facts.length; i++)
 		{
@@ -91,22 +93,33 @@ public class MathPlus2 {
 
 	}
 
+	/**
+	 * finds the median
+	 * @param arr
+	 * @return
+	 */
 	public static double median(double [] arr) {
 
+		//sorts the array from least to greatest
 		Arrays.sort(arr);
 
-
+		//divides length of the array by 2
 		int middleIndex = arr.length / 2;
 
+		//finds the modulus by dividing length of the array by 2
 		int modulus = arr.length % 2;
 
+		//if it's not 0
 		if (modulus != 0)
 		{
+			//median is the number in middle index
 			double median = arr [middleIndex];
 			return median;
 		} 
+		//if 0
 		else
 		{
+			//
 			int middleIndex2 = middleIndex - 1;
 			double middleNumber1 = arr[middleIndex];
 			double middleNumber2 = arr[middleIndex2];
