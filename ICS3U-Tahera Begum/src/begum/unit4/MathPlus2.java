@@ -200,9 +200,9 @@ public class MathPlus2 {
 	public static int numOfFactors(int num4) {
 
 		int count = 0;
-		double stop = num4;
-		double round = Math.rint(stop);
-		for (int i = 1; i <= round; i = i + 1)
+		int stop = num4;
+		
+		for (int i = 1; i <= stop; i = i + 1)
 		{
 			double factor = num4 % i;
 			if (factor==0)
@@ -217,9 +217,9 @@ public class MathPlus2 {
 
 		int count = 0;
 		int count2 = 0;
-		double stop = num4;
-		double round = Math.rint(stop);
-		for (int i = 1; i <= round; i = i + 1)
+		int stop = num4;
+		
+		for (int i = 1; i <= stop; i = i + 1)
 		{
 			double mod = num4 % i;
 			if (mod==0)
@@ -230,7 +230,7 @@ public class MathPlus2 {
 
 		int [] factors = new int [count];
 		
-		for (int i = 1; i <= round; i = i + 1)
+		for (int i = 1; i <= stop; i = i + 1)
 		{
 			double factor = num4 % i;
 			if (factor==0)
